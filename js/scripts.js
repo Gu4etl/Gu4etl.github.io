@@ -15,6 +15,16 @@
     // Remove no-js class
     $('html').removeClass('no-js');
 
+
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 50){
+        $('header').addClass("sticky");
+      }
+      else{
+        $('header').removeClass("sticky");
+      }
+    });
+
     // Animate to section when nav is clicked
     $('header a').click(function(e) {
 
